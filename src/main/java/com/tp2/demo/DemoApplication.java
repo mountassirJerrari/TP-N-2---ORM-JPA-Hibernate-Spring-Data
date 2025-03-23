@@ -8,11 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-    @Autowired
-    private PatientRepository patientRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
@@ -21,10 +20,6 @@ public class DemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-		Patient patient = new Patient(null,"snater",new Date(),true , 100);
-
-		patientRepository.save(patient);
 
 
 
